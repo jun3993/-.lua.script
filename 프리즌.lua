@@ -8097,14 +8097,14 @@ local OnRankedCommand = function(text, ranked)
 							rchat("OK! Gave " .. plr.Name .. " antishoot.", true)
 						end
 					else
-						rchat("ERROR! You do not have permission to give others powers")
+						rchat("오류! 당신은 다른이에게 파워를 줄수 없어!")
 					end
 				end
 			else
-				rchat("ERROR! Not a valid player.")
+				rchat("오류 존재 하지 않는 이름.")
 			end
 		else
-			rchat("ERROR! This command is disabled.")
+			rchat("오류! 이 명령어 권한 혹은 오류 문제.")
 		end
 	elseif rcm("antipunch") or rcm("apunch") then
 		if Settings.Ranked.AllowPowers then
@@ -8128,14 +8128,14 @@ local OnRankedCommand = function(text, ranked)
 							rchat("OK! Gave " .. plr.Name .. " anti-punch.", true)
 						end
 					else
-						rchat("ERROR! You do not have permission to give others powers")
+						rchat("오류! 당신은 다른이에게 파워를 줄수 없어!")
 					end
 				end
 			else
-				rchat("ERROR! Not a valid player.")
+				rchat("오류 존재 하지 않는 이름.")
 			end
 		else
-			rchat("ERROR! This command is disabled.")
+			rchat("오류! 이 명령어 권한 혹은 오류 문제.")
 		end
 	elseif rcm("antiarrest") or rcm("aar") then
 		if Settings.Ranked.AllowPowers then
@@ -8159,14 +8159,14 @@ local OnRankedCommand = function(text, ranked)
 							rchat("OK! Gave " .. plr.Name .. " anti-arrest.", true)
 						end
 					else
-						rchat("ERROR! You do not have permission to give others powers")
+						rchat("오류! 당신은 다른이에게 파워를 줄수 없어!")
 					end
 				end
 			else
-				rchat("ERROR! Not a valid player.")
+				rchat("오류 존재 하지 않는 이름.")
 			end
 		else
-			rchat("ERROR! This command is disabled.")
+			rchat("오류! 이 명령어 권한 혹은 오류 문제.")
 		end
 	elseif rcm("punchaura") or rcm("paura") then
 		if Settings.Ranked.AllowPowers then
@@ -8190,14 +8190,14 @@ local OnRankedCommand = function(text, ranked)
 							rchat("OK! Gave " .. plr.Name .. " punch-aura.", true)
 						end
 					else
-						rchat("ERROR! You do not have permission to give others powers")
+						rchat("오류! 당신은 다른이에게 파워를 줄수 없어!")
 					end
 				end
 			else
-				rchat("ERROR! Not a valid player.")
+				rchat("오류 존재 하지 않는 이름.")
 			end
 		else
-			rchat("ERROR! This command is disabled.")
+			rchat("오류! 이 명령어 권한 혹은 오류 문제.")
 		end
 	elseif rcm("taseaura") or rcm("taura") then
 		if Settings.Ranked.Tase then
@@ -8207,13 +8207,13 @@ local OnRankedCommand = function(text, ranked)
 					Powers.Taseauras[plr.UserId] = plr
 					rchat("OK! " .. plr.Name .. " now has tase-aura.")
 				else
-					rchat("ERROR! Not a valid player.")
+					rchat("오류 존재 하지 않는 이름.")
 				end
 			else
-				rchat("ERROR! Aura commands are disabled.")
+				rchat("오류 Aura 명령어 권한 혹은 오류 문제.")
 			end
 		else
-			rchat("ERROR! Tase commands are disabled.")
+			rchat("오류 Tase 명령어 권한 혹은 오류 문제.")
 		end
 	elseif rcm("untaseaura") or rcm("untaura") then
 		if Settings.Ranked.Tase then
@@ -8223,13 +8223,13 @@ local OnRankedCommand = function(text, ranked)
 					Powers.Taseauras[plr.UserId] = nil
 					rchat("OK! Removed " .. plr.Name .. "'s tase-aura.")
 				else
-					rchat("ERROR! Not a valid player.")
+					rchat("오류 존재 하지 않는 이름.")
 				end
 			else
-				rchat("ERROR! Aura commands are disabled.")
+				rchat("오류 Aura 명령어 권한 혹은 오류 문제.")
 			end
 		else
-			rchat("ERROR! Tase commands are disabled.")
+			rchat("오류 Tase 명령어 권한 혹은 오류 문제.")
 		end
 	elseif rcm("void") or rcm("abyss") then
 		if Settings.Ranked.TrapVoid then
@@ -8258,13 +8258,13 @@ local OnRankedCommand = function(text, ranked)
 						rchat("ERROR! Player: " .. plr.Name .. " is whitelisted!")
 					end
 				else
-					rchat("ERROR! You do not have permission to void me!")
+					rchat("오류! 당신은 나에게 void 명령어 사용 불가해!")
 				end
 			else
-				rchat("ERROR! Not a valid player.")
+				rchat("오류 존재 하지 않는 이름.")
 			end
 		else
-			rchat("ERROR! Void/Trap commands are disabled.")
+			rchat("오류 보이드 명령어 권한 없음 혹은 오류.")
 		end
 	elseif rcm("trap") or rcm("punish") then
 		if Settings.Ranked.TrapVoid then
@@ -8278,13 +8278,13 @@ local OnRankedCommand = function(text, ranked)
 						rchat("ERROR! Player: " .. plr.Name .. " is whitelisted!")
 					end
 				else
-					rchat("ERROR! You do not have permission to trap me!")
+					rchat("오류! 당신은 나에게 trap 명령어 사용 불가해!")
 				end
 			else
-				rchat("ERROR! Not a valid player.")
+				rchat("오류 존재 하지 않는 이름.")
 			end
 		else
-			rchat("ERROR! Trap/Void commands are disabled.")
+			rchat("오류 보이드 명령어 권한 없음 혹은 오류.")
 		end
 	elseif rcm("untrap") or rcm("unpunish") then
 		if Settings.Ranked.TrapVoid then
@@ -8293,10 +8293,10 @@ local OnRankedCommand = function(text, ranked)
 				Loops.Trapped[plr.UserId] = nil
 				rchat("OK! Stopped trapping " .. plr.Name .. ".")
 			else
-				rchat("ERROR! Not a valid player.")
+				rchat("오류 존재 하지 않는 이름.")
 			end
 		else
-			rchat("ERROR! Trap/Void commands are disabled.")
+			rchat("오류 보이드 명령어 권한 없음 혹은 오류.")
 		end
 	elseif rcm("nexus") or rcm("nex") or rcm("prison") then
 		if Settings.Ranked.Teleport then
@@ -8311,10 +8311,10 @@ local OnRankedCommand = function(text, ranked)
 					LocTP(tmp)
 				end)
 			else
-				rchat("ERROR! Not a valid player.")
+				rchat("오류 존재 하지 않는 이름.")
 			end
 		else
-			rchat("ERROR! Teleport Place commands are disabled.")
+			rchat("오류 권한 없음 혹은 탤로포트 장소 오류.")
 		end
 	elseif rcm("crimbase") or rcm("cbase") or rcm("base") then
 		if Settings.Ranked.Teleport then
@@ -8329,10 +8329,10 @@ local OnRankedCommand = function(text, ranked)
 					LocTP(tmp)
 				end)
 			else
-				rchat("ERROR! Not a valid player.")
+				rchat("오류 존재 하지 않는 이름.")
 			end
 		else
-			rchat("ERROR! Teleport Place commands are disabled.")
+			rchat("오류 권한 없음 혹은 탤로포트 장소 오류.")
 		end
 	elseif rcm("armoury") or rcm("armory") or rcm("armor") or rcm("arm") then
 		if Settings.Ranked.Teleport then
@@ -8347,10 +8347,10 @@ local OnRankedCommand = function(text, ranked)
 					LocTP(tmp)
 				end)
 			else
-				rchat("ERROR! Not a valid player.")
+				rchat("오류 존재 하지 않는 이름.")
 			end
 		else
-			rchat("ERROR! Teleport Place commands are disabled.")
+			rchat("오류 권한 없음 혹은 탤로포트 장소 오류.")
 		end
 	elseif rcm("yard") or rcm("yar") then
 		if Settings.Ranked.Teleport then
@@ -8365,10 +8365,10 @@ local OnRankedCommand = function(text, ranked)
 					LocTP(tmp)
 				end)
 			else
-				rchat("ERROR! Not a valid player.")
+				rchat("오류 존재 하지 않는 이름.")
 			end
 		else
-			rchat("ERROR! Teleport Place commands are disabled.")
+			rchat("오류 권한 없음 혹은 탤로포트 장소 오류.")
 		end
 	elseif rcm("roof") or rcm("roo") then
 		if Settings.Ranked.Teleport then
@@ -8383,10 +8383,10 @@ local OnRankedCommand = function(text, ranked)
 					LocTP(tmp)
 				end)
 			else
-				rchat("ERROR! Not a valid player.")
+				rchat("오류 존재 하지 않는 이름.")
 			end
 		else
-			rchat("ERROR! Teleport Place commands are disabled.")
+			rchat("오류 권한 없음 혹은 탤로포트 장소 오류.")
 		end
 	elseif rcm("cafe") or rcm("cafeteria") then
 		if Settings.Ranked.Teleport then
@@ -8401,10 +8401,10 @@ local OnRankedCommand = function(text, ranked)
 					LocTP(tmp)
 				end)
 			else
-				rchat("ERROR! Not a valid player.")
+				rchat("오류 존재 하지 않는 이름.")
 			end
 		else
-			rchat("ERROR! Teleport Place commands are disabled.")
+			rchat("오류 권한 없음 혹은 탤로포트 장소 오류.")
 		end
 	elseif rcm("tower") or rcm("ytower") or rcm("tow") or rcm("ytow") then
 		if Settings.Ranked.Teleport then
@@ -8419,10 +8419,10 @@ local OnRankedCommand = function(text, ranked)
 					LocTP(tmp)
 				end)
 			else
-				rchat("ERROR! Not a valid player.")
+				rchat("오류 존재 하지 않는 이름.")
 			end
 		else
-			rchat("ERROR! Teleport Place commands are disabled.")
+			rchat("오류 권한 없음 혹은 탤로포트 장소 오류.")
 		end
 	elseif rcm("gtower") or rcm("gtow") then
 		if Settings.Ranked.Teleport then
@@ -8437,10 +8437,10 @@ local OnRankedCommand = function(text, ranked)
 					LocTP(tmp)
 				end)
 			else
-				rchat("ERROR! Not a valid player.")
+				rchat("오류 존재 하지 않는 이름.")
 			end
 		else
-			rchat("ERROR! Teleport Place commands are disabled.")
+			rchat("오류 권한 없음 혹은 탤로포트 장소 오류.")
 		end
 	elseif rcm("fart") or rcm("fard") or rcm("poop") then
 		if Settings.Ranked.KillCmds then
@@ -8462,11 +8462,11 @@ local OnRankedCommand = function(text, ranked)
 				end
 				rchat("Fard: " .. sussy.Name .. " Initiated a deadly fart")
 			else
-				rchat("Not a valid player.")
-				Notif("Error", "There are no shits to give.")
+				rchat("오류 존재 하지 않는 이름.")
+				Notif("오류 명령어 실행 실패됨.")
 			end
 		else
-			rchat("ERROR! You do not have permission to use kill commands.")
+			rchat("오류 킬 명령어 사용 권한 없음.")
 		end
 	else
 		if rcm("givecmds") or rcm("gcmds") or rcm("admin") or rcm("rank") or rcm("gcmd") or rcm("givecmd") then
@@ -8474,12 +8474,12 @@ local OnRankedCommand = function(text, ranked)
 				local plr = PlrFromArgs(Args[2], false)
 				if plr then
 					RankedPlrs[plr.UserId] = plr
-					rchat("OK! Gave " .. plr.Name .. " *admin* commands.")
+					rchat("오케이 유저 " .. plr.Name .. " 에게 어드민 혹은 명령어 지급됨.")
 				else
-					rchat("ERROR! Not a valid player.")
+					rchat("오류 존재 하지 않는 이름.")
 				end
 			else
-				rchat("ERROR! You do not have permission to give others commands.")
+				rchat("오류 어드민 주기/삭제 관련 명령어 권한 없음.")
 			end
 			return
 		end
@@ -8488,12 +8488,12 @@ local OnRankedCommand = function(text, ranked)
 				local plr = PlrFromArgs(Args[2], false)
 				if plr then
 					RankedPlrs[plr.UserId] = plr
-					rchat("OK! Gave " .. plr.Name .. " *admin* commands.")
+					rchat("오케이 유저 " .. plr.Name .. " 에게 어드민 혹은 명령어 삭제됨")
 				else
-					rchat("ERROR! Not a valid player.")
+					rchat("오류 존재 하지 않는 이름.")
 				end
 			else
-				rchat("ERROR! You do not have permission to give others commands.")
+				rchat("오류 어드민 주기/삭제 관련 명령어 권한 없음.")
 			end
 			return
 		end
@@ -8540,7 +8540,7 @@ local OnRankedCommand = function(text, ranked)
 			end
 		else
 			if Prefix ~= "" then
-				rchat("Not a valid command(?)")
+				rchat("존재 하지 않는 명령어 ";" 인지 확인 바람.")
 			end
 		end
 	end
@@ -8604,7 +8604,7 @@ Connections.PlayerAdded = Players.PlayerAdded:Connect(function(plr)
 	if RankedPlrs[plr.UserId] then
 		RankedPlrs[plr.UserId] = plr
 		task.delay(1, function()
-			Chat("/w " .. plr.Name .. " You have commands, type " .. Prefix .. "cmds to show a list of commands.")
+			Chat("/w " .. plr.Name .. " 어드민 지급됨. " .. Prefix .. "cmds 사용시 명령어 확인 가능함.")
 		end)
 	end
 	ChatCon[plr.UserId] = plr.Chatted:Connect(function(msg)
@@ -10375,4 +10375,4 @@ UnloadScript = function()
 	game.Players.LocalPlayer.PlayerScripts.ClientGunReplicator.Disabled = false; workspace:FindFirstChild("PLADMIN LOADED SUCCESS"):Destroy()
 end
 --Check gamepass
-LocPL.Gamepass = game:GetService("MarketplaceService"):UserOwnsGamePassAsync(LocalPlayer.UserId, 96651) or game:GetService("MarketplaceService"):UserOwnsGamePassAsync(LocalPlayer.UserId, 643697197)
+LocPL.Gamepass = game:GetService("MarketplaceService"):UserOwnsGamePassAsync(LocalPlayer.UserId, 1176269302) or game:GetService("MarketplaceService"):UserOwnsGamePassAsync(LocalPlayer.UserId, 643697197)
